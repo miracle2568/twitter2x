@@ -1,0 +1,23 @@
+{
+  "name": "twitter2x",
+  "description": "Webページのリンクを「twitter.com」から「x.com」に置換します。",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js":      ["js/loader.js"],
+      "run_at": "document_start"
+  }],
+  "web_accessible_resources": [{
+      "resources": ["js/content.js",
+                    "js/program.js"],
+      "matches":   ["<all_urls>"]
+  }],
+  "icons": {
+    "16": "files/icon16.png",
+    "32": "files/icon32.png",
+    "48": "files/icon48.png",
+    "128": "files/icon128.png"
+  }
+}
